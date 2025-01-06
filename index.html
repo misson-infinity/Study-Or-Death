@@ -3,24 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Or Death (HBR)</title>
+  <title>Study Or Death</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js").then(() => {
+        console.log("Service Worker Registered");
+      });
+    }
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Study Or Death (HBR)</h1>
-    <form id="syllabusForm">
-      <label for="syllabus">Enter your syllabus:</label>
-      <textarea id="syllabus" placeholder="Enter topics, separated by commas"></textarea>
-      <button type="button" onclick="generateRoutine()">Generate Routine</button>
-    </form>
-    <div id="routine"></div>
-    <div>
-      <label for="alarm">Set Daily Alarm:</label>
-      <input type="time" id="alarm">
-      <button type="button" onclick="setAlarm()">Set Alarm</button>
-    </div>
-  </div>
+  <header>
+    <h1>Study Or Death</h1>
+    <p>Your Personal Study Planner</p>
+  </header>
+
+  <main>
+    <button id="set-alarm">Set Alarm</button>
+    <div id="output"></div>
+  </main>
+
+  <footer>
+    <p>Powered by Study Or Death (HBR)</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
