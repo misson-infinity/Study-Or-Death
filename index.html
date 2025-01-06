@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Or Death (HBR)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Study Or Death (HBR)</h1>
+    <form id="syllabusForm">
+      <label for="syllabus">Enter your syllabus:</label>
+      <textarea id="syllabus" placeholder="Enter topics, separated by commas"></textarea>
+      <button type="button" onclick="generateRoutine()">Generate Routine</button>
+    </form>
+    <div id="routine"></div>
+    <div>
+      <label for="alarm">Set Daily Alarm:</label>
+      <input type="time" id="alarm">
+      <button type="button" onclick="setAlarm()">Set Alarm</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+  </html>
